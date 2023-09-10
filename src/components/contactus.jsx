@@ -14,7 +14,7 @@ const ContactUs = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     let formData = new FormData(event.target);
-
+  
     try {
       let response = await fetch("/", {
         method: "POST",
@@ -24,20 +24,22 @@ const ContactUs = () => {
       if (response.ok) {
         alert("Form submitted successfully");
       } else {
-        alert("Form submission failed");
+        throw new Error('Network response was not ok ' + response.statusText);
       }
     } catch (error) {
-      console.error(error);
+      console.log(error);
       alert("An error occurred, please try again later");
     }
   };
+  
 
   return (
     <Container id="contact-us" sx={{ pt: 27, pb: 10 }}>
       <Typography variant="h2" mb={2} textAlign="center">
         Contact Us
       </Typography>
-      <form noValidate autoComplete="off" name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+      <form noValidate name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+        <input type="hidden" name="form-name" value="contact" />
         <TextField fullWidth margin="normal" label="Name" variant="outlined" name="name" />
         <TextField fullWidth margin="normal" label="Email" variant="outlined" name="email" />
         <TextField fullWidth margin="normal" label="Phone Number" variant="outlined" name="phone" />
@@ -46,6 +48,7 @@ const ContactUs = () => {
           Submit
         </Button>
       </form>
+
 
       <Container sx={{ display: 'flex', justifyContent: 'center', mt: 14 }}>
         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
