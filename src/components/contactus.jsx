@@ -12,21 +12,21 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const ContactUs = () => {
   return (
-    <Container id="contact-us" sx={{ py: 30 }}>
+    <Container id="contact-us" sx={{ pt: 27, pb: 10 }}>
       <Typography variant="h2" mb={2} textAlign="center">
         Contact Us
       </Typography>
-      <form noValidate autoComplete="off">
-        <TextField fullWidth margin="normal" label="Name" variant="outlined" />
-        <TextField fullWidth margin="normal" label="Email" variant="outlined" />
-        <TextField fullWidth margin="normal" label="Phone Number" variant="outlined" />
-        <TextField fullWidth margin="normal" label="Message" variant="outlined" multiline rows={4} />
-        <Button variant="contained" sx={{ mt: 10, backgroundColor: 'black', color: 'white' }}>
+      <form noValidate autoComplete="off" name="contact" method="POST" data-netlify="true">
+        <TextField fullWidth margin="normal" label="Name" variant="outlined" name="name" />
+        <TextField fullWidth margin="normal" label="Email" variant="outlined" name="email" />
+        <TextField fullWidth margin="normal" label="Phone Number" variant="outlined" name="phone" />
+        <TextField fullWidth margin="normal" label="Message" variant="outlined" multiline rows={4} name="message" />
+        <Button variant="contained" sx={{ mt: 7, backgroundColor: 'black', color: 'white' }} type="submit">
           Submit
         </Button>
       </form>
 
-      <Container sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
+      <Container sx={{ display: 'flex', justifyContent: 'center', mt: 14 }}>
         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
           <IconButton sx={{ color: 'darkgrey' }}>
             <FacebookIcon />
