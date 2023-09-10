@@ -11,12 +11,33 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const ContactUs = () => {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    let formData = new FormData(event.target);
+
+    try {
+      let response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+      if (response.ok) {
+        alert("Form submitted successfully");
+      } else {
+        alert("Form submission failed");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("An error occurred, please try again later");
+    }
+  };
+
   return (
     <Container id="contact-us" sx={{ pt: 27, pb: 10 }}>
       <Typography variant="h2" mb={2} textAlign="center">
         Contact Us
       </Typography>
-      <form noValidate autoComplete="off" name="contact" method="POST" data-netlify="true">
+      <form noValidate autoComplete="off" name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
         <TextField fullWidth margin="normal" label="Name" variant="outlined" name="name" />
         <TextField fullWidth margin="normal" label="Email" variant="outlined" name="email" />
         <TextField fullWidth margin="normal" label="Phone Number" variant="outlined" name="phone" />
@@ -58,4 +79,3 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
-
