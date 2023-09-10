@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import gpImage from '../assets/gp.jpg';
+import ssImage from '../assets/ss.jpg';
 import mpImage from '../assets/mp.jpg';
 import coilImage from '../assets/coil.jpg';
 import colorpImage from '../assets/colorp.jpg';
@@ -15,14 +15,14 @@ const Offerings = () => {
 
     const products = useMemo(() => [
         { 
-            name: 'PRE-GALVANIZED (G.P PIPES)', 
+            name: 'PRE-GALVANIZED (G.P PIPES & G.I PIPES)', 
             description: 'Pipes are made of carbon steel. These pipes are “hot dipped” in galvanized bath (hot galvanizing) with pipe ends are fully capped. The galvanizing is only on outside. Galvanizing is all about zinc coating, which offers better corrosion resistance than actual carbon steel.',
             image: pgpImage 
         },
-        { name: 'M.S. PIPES', description: 'As MS Pipes are made from mild steel they can easily be welded and formed in various shapes and sizes for pipelining and tubing purposes. These are generally used for drinking water supply i.e. Plumbing, Firefighting, HVAC but can also be used in various other Industrial and Engineering applications.', image: mpImage },
+        { name: 'M.S PATTI & COIL PIPES', description: 'As MS Pipes are made from mild steel they can easily be welded and formed in various shapes and sizes for pipelining and tubing purposes. These are generally used for drinking water supply i.e. Plumbing, Firefighting, HVAC but can also be used in various other Industrial and Engineering applications.', image: mpImage },
         { name: 'G.I COILS & SHEETS', description: 'Galvanized iron (GI) sheets are basically steel sheets which have been coated with zinc. These sheets include a range of hot dip galvanized and electro-galvanized steel sheet. It reacts with the atmosphere to provide the base steel a protection', image: coilImage },
         { name: 'COLOR COATED SHEETS', description: 'The color coated roofing sheets are used in place of galvanized iron sheets in residential buildings to provide better aesthetic look. Moreover, unlike traditional coating sheets, these sheets have a strong base of steel metals. These color coated steel metals can be copper, aluminum, zinc-aluminum, and tin.', image: colorpImage },
-        { name: 'GALVANIZED (G.I PIPES)', description: 'These pipes are widely used for conveying raw water & distribution of treated water in majority of rural water supply schemes, where the requirement of water is less. Mostly medium quality GI pipes are used. These pipes are cheap, light in weight and easy to handle & transport & easy to join.', image: gpImage },
+        { name: 'STRUCTURAL STEEL (Angle, Channel, Beam)', description: 'These pipes are widely used for conveying raw water & distribution of treated water in majority of rural water supply schemes, where the requirement of water is less. Mostly medium quality GI pipes are used. These pipes are cheap, light in weight and easy to handle & transport & easy to join.', image: ssImage },
         { name: 'M.S PLATE & CHEQUER PLATE', description: 'Mild Steel (MS) Plate is a steel plate used for construction. It is flexible, not brittle and it is the most common form of steel. MS plates are used to give strength to a concrete cement in a building or any structural works. It is also used for construction and industrial applications.', image: msImage },
     ], []);
 
