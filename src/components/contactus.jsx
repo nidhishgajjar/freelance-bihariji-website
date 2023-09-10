@@ -60,8 +60,8 @@ const ContactUs = () => {
 
   return (
       <Container id="contact-us" sx={{ pt: 8, pb: 6, maxWidth: '1200px', margin: '0 auto' }}>
-        <Typography variant="h2" mt={10} textAlign="centre" sx={{ color: 'black', paddingBottom: '125px', px: 5 }}> {/* Change the header text color for a better contrast with the dark background */}
-          Contact Us
+        <Typography variant="h2" mt={10} textAlign="centre" sx={{ color: 'black', paddingBottom: '100px', px: 5 }}> {/* Change the header text color for a better contrast with the dark background */}
+          Contact
         </Typography>
 
         <Grid container spacing={5} sx={{ px: 5 }}>
@@ -71,7 +71,7 @@ const ContactUs = () => {
             </Grid>
           ))}
         </Grid>
-        <Divider sx={{ mt: 20, mb: 20 }} />
+        <Divider sx={{ mt: 10, mb: 10 }} />
         <Typography variant="h4" mt={10} textAlign="left" sx={{ color: 'black', paddingBottom: '50px' }}>
           Inquiry Form
         </Typography>
