@@ -1,4 +1,5 @@
 import './App.css';
+import Header from './components/header';
 import Landing from './components/landing';
 import Offerings from './components/offerings';
 import AboutUs from './components/aboutus';
@@ -10,13 +11,22 @@ import ContactUs from './components/contactus';
 function App() {
   return (
     <div className="App">
-      <Landing />
-      <AboutUs />
-      <Offerings />
+      <Header />
+      <div id="landing">
+        <Landing />
+      </div>
+      <div id="aboutus">
+        <AboutUs />
+      </div>
+      <div id="offerings">
+        <Offerings />
+      </div>
       <Statistics />
       <Distributors />
       {/* <IndustriesWeServe /> */}
-      <ContactUs />
+      <div id="contactus">
+        <ContactUs />
+      </div>
     </div>
   );
 }

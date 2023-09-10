@@ -3,21 +3,21 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import jyoti from '../assets/jyoti.png';
+import jsw from '../assets/jsw.png';
 import apollo from '../assets/apollo.png';
-import goodluck from '../assets/goodluck.png';
+import sg from '../assets/sg.png';
 import asian from '../assets/asian.png';
-import ratnakar from '../assets/ratnakar.png';
+import surya from '../assets/surya.png';
 import amns from '../assets/amns.png';
 
 const Distributors = () => {
   const distributorImages = [
-    jyoti,
+    jsw,
+    sg,
     apollo,
-    goodluck,
-    asian,
-    ratnakar,
     amns,
+    surya,
+    asian,
   ];
 
   return (
@@ -36,7 +36,7 @@ const Distributors = () => {
       >
         <Container>
           <Typography variant="h2" mb={2} textAlign="left" sx={{ pb: 15 }}>
-            Distributors
+            Authorized Distributors
           </Typography>
           <Grid container spacing={2}>
             {distributorImages.map((image, index) => (
